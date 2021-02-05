@@ -22,10 +22,10 @@ script:
   #- docker tag udagram-frontend ademolaadeolu18/udagram-frontend:latest
 
   - docker build -t feed-api ./Feed-api
-  - docker tag feed-api ademolaadeolu18/feed-api:latest
+  - docker tag feed-api ademolaadeolu18/feed-api
 
   - docker build -t user-api ./User-api
-  - docker tag user-api ademolaadeolu18/user-api:latest
+  - docker tag user-api ademolaadeolu18/user-api
 
 
 
