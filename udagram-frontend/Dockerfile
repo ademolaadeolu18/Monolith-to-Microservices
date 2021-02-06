@@ -6,7 +6,7 @@ RUN npm install -g ionic
 
 RUN npm install
 
-RUN npm run build
+COPY . .
 
 FROM nginx:alpine
 
