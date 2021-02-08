@@ -1,32 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: my-app-user
   labels:
-    service: reverse-proxy
-  name: reverse-proxy
+    app: my-app-user
+  
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: reverse-proxy
+      app: my-app-user
   template:
     metadata:
       labels:
-        app: reverse-proxy
+        app: my-app-user
     spec:
       containers:
-      - image: ademolaadeolu18/reverse-proxy
-        name: reverse-proxy
-        imagePullPolicy: Always          
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"       
+      - image: ademolaadeolu18/user-api   
+        name: user-api
         ports:
         - containerPort: 8080
-      restartPolicy: Always
+     
 
 

@@ -1,24 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-feed
   labels:
-    app: my-app-feed
-  
+    app: reverse-proxy
+  name: reverse-proxy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-app-feed
+      app: reverse-proxy
   template:
     metadata:
       labels:
-        app: my-app-feed
+        app: reverse-proxy
     spec:
       containers:
-      - name: feed-api
-        image: ademolaadeolu18/feed-api
-        
+      - image: ademolaadeolu18/reverse-proxy
+        name: reverse-proxy
         imagePullPolicy: Always          
         resources:
           requests:

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
+  name: my-app-user
   labels:
-    service: reverse-proxy
-  name: reverse-proxy-svc
+    run: my-app-user
+  
 spec:
   ports:
-  - name: "8080"
-    port: 8080
-    targetPort: 8080
+  - port: 8080
+    protocol: TCP
   selector:
-    app: reverse-proxy
+    run: my-app-user
