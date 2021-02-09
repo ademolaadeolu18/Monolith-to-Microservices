@@ -16,16 +16,16 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t reverse-proxy ./reverse-proxy
-  - docker tag reverse-proxy ademolaadeolu18/reverse-proxy:latest
+  - docker tag reverse-proxy ademolaadeolu18/reverse-proxy:
 
   - docker build -t udagram-frontend ./udagram-frontend
   - docker tag udagram-frontend ademolaadeolu18/udagram-frontend:latest
 
   - docker build -t feed-api ./Feed-api
-  - docker tag feed-api ademolaadeolu18/feed-api:latest
+  - docker tag feed-api ademolaadeolu18/feed-api
 
   - docker build -t user-api ./User-api
-  - docker tag user-api ademolaadeolu18/user-api:latest
+  - docker tag user-api ademolaadeolu18/user-api
 
 
 
