@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t reverse-proxy .
+  - docker build -t reverse-proxy ./reverse-proxy
   - docker tag reverse-proxy ademolaadeolu18/reverse-proxy
 
 after_success:
