@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-feed
+  labels:
+    app: my-app-feed
+  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app-feed
+  template:
+    metadata:
+      labels:
+        app: my-app-feed
+    spec:
+      containers:
+      - name: feed-api
+        image: ademolaadeolu18/feed-api
+        
+        imagePullPolicy: Always          
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"       
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always
+
+
