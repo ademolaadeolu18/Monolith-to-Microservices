@@ -15,7 +15,7 @@ spec:
         app: reverse-proxy
     spec:
       containers:
-      - image: ademolaadeolu18/reverse-proxy
+      - image: ademolaadeolu18/reverse-proxy:latest
         name: reverse-proxy
         imagePullPolicy: Always          
         resources:
