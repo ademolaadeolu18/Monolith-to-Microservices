@@ -1,3 +1,4 @@
+# files to ignore
 Feed-api/node_modules/
-udagram-frontend/node_modules/
 User-api/node_modules/
+udagram-frontend/node_modules/
